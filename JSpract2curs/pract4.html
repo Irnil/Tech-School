@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+
+  	var S;
+  	var i = 0;
+  	var XMass = [];
+  	var Sum = 0;
+  	var Ymn = 1;
+  	var F;
+
+  	do{
+  		do{
+  			S = +prompt('Введите ' + i + ' элемент первого массива (оставьте строку пустой если желаете закончить ввод массива)');
+  			if (isNaN(S) === true) alert('Вводимый элемент должен быть числом');
+  		}while (isNaN(S) === true);
+
+  		XMass[i] = S;
+  	  i++;
+  	}while (S != '' && S != ' ');
+
+  	XMass.pop();
+  	i = 0;
+  	do{
+      var Choose = +prompt("Программа найдет среднее арифметическое или среднее геометрическое элементов одномерного массива, массив при этом вводится с клавиатуры. Выберите нужное действие:  \n 1. Найти среднее арифметическое. \n 2. Найти среднее геометрическое.");
+
+      switch(Choose){
+        case 1:
+    			S = XMass.length;
+
+          for (i = 0; i < S; i++)
+            Sum = Sum + XMass[i];
+
+          F = Sum / XMass.length;
+    			document.write('Среднее арифметическое: ' + F.toFixed(2));
+          break;
+
+        case 2:
+          S = XMass.length;
+
+          for (i = 0; i < S; i++)
+            Ymn = Ymn * XMass[i];
+
+          if (Ymn <= 0 && XMass.length % 2 == 0) {
+            alert ("Ошибка! Корень четной степени из отрицательного числа!");
+          }
+          else{
+            F = Math.pow(Ymn,(1 / XMass.length));
+            document.write('Среднее геометрическое: ' + F.toFixed(2));
+          }
+          break;
+
+        default:
+  		    alert("Пожалуйста выберите один из представленных пунктов"); }}
+    while (Choose !== 1 && Choose !== 2);
+
+	</script>
+</body>
+</html>
