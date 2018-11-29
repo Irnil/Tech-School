@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		alert("Программа вычислит значение функции: \n 2(8(a^2)-12abx+15(b^2)(x^2))sqrt((a+bx)^3) \n _____________________________________________ \n                  105(b^3)");
+
+		do
+		{ var a=prompt('введите a',1);
+		  if (isNaN(a)==false)
+		  var b=prompt('введите b',1);
+		  if (isNaN(b)==false)
+		  var x=prompt('введите x',1);
+		  if (isNaN(x)==false)
+		  {
+				var znam=105*(b^3);
+				var f=(2*(8*(a^2)-12*a*b*x+15*(b^2)*(x^2))*(Math.sqrt((a+b*x)^3)))/znam;
+				if (znam==0){
+					alert("Знаменатель не может равняться нулю.");
+				}
+				else{
+					alert("F=" + f.toFixed(1));
+				}
+			}
+		 else
+			alert("Необходимо использовать только числа!"); }
+		while (isNaN(a)!==false || isNaN(b)!==false || isNaN(c)!==false);
+	</script>
+</body>
+</html>
