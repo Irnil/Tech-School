@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<script>
+	do{
+
+    do{
+      var Choose=+prompt("Программа переводит дюймы в сантиметры и сантиметры в дюймы. \n 1. Дюймы в сантиметры. \n 2. Сантиметры в дюймы.");
+  	  switch(Choose){
+
+        case 1:
+
+          alert('Перевод дюймов в сантиметры.');
+          do{ //хороший годный код для контроля ввода чисел
+            var value = prompt('Введите значение: ');
+            if ((isNaN(value)!==false) || (value<=0))
+              alert('Введите положительное число');
+          }while((isNaN(value)!==false) || (value<=0));
+
+          var res = value / 2.54;
+          alert('Результат: ' + value + ' дюймов = ' + res.toFixed(2) + ' сантиметров.');
+
+  		    break;
+
+        case 2:
+
+          alert('Перевод сантиметров в дюймы.');
+          do{ //хороший годный код для контроля ввода чисел
+            var value = prompt('Введите значение: ');
+            if ((isNaN(value)!==false) || (value<=0))
+              alert('Введите положительное число');
+          }while((isNaN(value)!==false) || (value<=0));
+
+          var res = value * 2.54;
+          alert('Результат: ' + value + ' сантиметров = ' + res.toFixed(2) + ' дюймов.');
+
+         break;
+
+        default:
+  		  alert("Пожалуйста, выберите 1 или 2");
+      }
+    }while (Choose!==1 && Choose!==2);
+
+    var Restart = prompt('Заново? (y/n)');
+    if(Restart=='y' || Restart=='Y'){
+      alert('Окей, еще разок =)');
+    }
+    else{
+      alert('Пока!');
+      break;
+    }
+
+  }while (Restart=='y' || Restart=='Y');
+	</script>
+
+</body>
+</html>
