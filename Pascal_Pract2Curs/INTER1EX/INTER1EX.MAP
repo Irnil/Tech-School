@@ -1,0 +1,112 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 0084EH 0084FH interpretator      CODE
+ 00850H 00E6EH 0061FH Crt                CODE
+ 00E70H 04F00H 04091H System             CODE
+ 04F10H 052E9H 003DAH DATA               DATA
+ 052F0H 092EFH 04000H STACK              STACK
+ 092F0H 092F0H 00000H HEAP               HEAP
+
+  Address         Publics by Value
+
+ 0000:0000       cifra
+ 0000:003F       sintax
+ 0000:0186       semantika
+ 0000:02E0       operand
+ 0000:0434       calc
+ 0000:0578       deleter
+ 0000:0696       @
+ 0085:000D       @
+ 0085:0177       TextMode
+ 0085:018C       Window
+ 0085:01CC       ClrScr
+ 0085:01E6       ClrEol
+ 0085:01FA       InsLine
+ 0085:01FF       DelLine
+ 0085:021F       GotoXY
+ 0085:024B       WhereX
+ 0085:0257       WhereY
+ 0085:0263       TextColor
+ 0085:027D       TextBackground
+ 0085:0295       LowVideo
+ 0085:029B       HighVideo
+ 0085:02A1       NormVideo
+ 0085:02A8       Delay
+ 0085:02D4       Sound
+ 0085:0301       NoSound
+ 0085:0308       KeyPressed
+ 0085:031A       ReadKey
+ 0085:033C       AssignCrt
+ 04F1:0002       OvrCodeList
+ 04F1:0004       OvrHeapSize
+ 04F1:0006       OvrDebugPtr
+ 04F1:000A       OvrHeapOrg
+ 04F1:000C       OvrHeapPtr
+ 04F1:000E       OvrHeapEnd
+ 04F1:0010       OvrLoadList
+ 04F1:0012       OvrDosHandle
+ 04F1:0014       OvrEmsHandle
+ 04F1:0016       HeapOrg
+ 04F1:001A       HeapPtr
+ 04F1:001E       HeapEnd
+ 04F1:0022       FreeList
+ 04F1:0026       FreeZero
+ 04F1:002A       HeapError
+ 04F1:002E       ExitProc
+ 04F1:0032       ExitCode
+ 04F1:0034       ErrorAddr
+ 04F1:0038       PrefixSeg
+ 04F1:003A       StackLimit
+ 04F1:003C       InOutRes
+ 04F1:003E       RandSeed
+ 04F1:0042       SelectorInc
+ 04F1:0044       Seg0040
+ 04F1:0046       SegA000
+ 04F1:0048       SegB000
+ 04F1:004A       SegB800
+ 04F1:004C       Test8086
+ 04F1:004D       Test8087
+ 04F1:004E       FileMode
+ 04F1:0052       Line
+ 04F1:0152       A
+ 04F1:0154       B
+ 04F1:0156       znak
+ 04F1:0157       zznak
+ 04F1:0158       Znak_r
+ 04F1:0159       flag
+ 04F1:015A       rezult
+ 04F1:0160       m
+ 04F1:0162       value_a
+ 04F1:0164       value_b
+ 04F1:0166       CheckBreak
+ 04F1:0167       CheckEOF
+ 04F1:0168       DirectVideo
+ 04F1:0169       CheckSnow
+ 04F1:016A       LastMode
+ 04F1:016C       TextAttr
+ 04F1:016E       WindMin
+ 04F1:0170       WindMax
+ 04F1:017A       Input
+ 04F1:027A       Output
+ 04F1:037A       SaveInt00
+ 04F1:037E       SaveInt02
+ 04F1:0382       SaveInt1B
+ 04F1:0386       SaveInt21
+ 04F1:038A       SaveInt23
+ 04F1:038E       SaveInt24
+ 04F1:0392       SaveInt34
+ 04F1:0396       SaveInt35
+ 04F1:039A       SaveInt36
+ 04F1:039E       SaveInt37
+ 04F1:03A2       SaveInt38
+ 04F1:03A6       SaveInt39
+ 04F1:03AA       SaveInt3A
+ 04F1:03AE       SaveInt3B
+ 04F1:03B2       SaveInt3C
+ 04F1:03B6       SaveInt3D
+ 04F1:03BA       SaveInt3E
+ 04F1:03BE       SaveInt3F
+ 04F1:03C2       SaveInt75
+
+Program entry point at 0000:0696

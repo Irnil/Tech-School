@@ -1,0 +1,104 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 00464H 00465H labirint           CODE
+ 00470H 00A8EH 0061FH Crt                CODE
+ 00A90H 014A4H 00A15H System             CODE
+ 014B0H 018CFH 00420H DATA               DATA
+ 018D0H 058CFH 04000H STACK              STACK
+ 058D0H 058D0H 00000H HEAP               HEAP
+
+  Address         Publics by Value
+
+ 0000:0000       printlab
+ 0000:00FE       go
+ 0000:0258       @
+ 0047:000D       @
+ 0047:0177       TextMode
+ 0047:018C       Window
+ 0047:01CC       ClrScr
+ 0047:01E6       ClrEol
+ 0047:01FA       InsLine
+ 0047:01FF       DelLine
+ 0047:021F       GotoXY
+ 0047:024B       WhereX
+ 0047:0257       WhereY
+ 0047:0263       TextColor
+ 0047:027D       TextBackground
+ 0047:0295       LowVideo
+ 0047:029B       HighVideo
+ 0047:02A1       NormVideo
+ 0047:02A8       Delay
+ 0047:02D4       Sound
+ 0047:0301       NoSound
+ 0047:0308       KeyPressed
+ 0047:031A       ReadKey
+ 0047:033C       AssignCrt
+ 014B:0002       OvrCodeList
+ 014B:0004       OvrHeapSize
+ 014B:0006       OvrDebugPtr
+ 014B:000A       OvrHeapOrg
+ 014B:000C       OvrHeapPtr
+ 014B:000E       OvrHeapEnd
+ 014B:0010       OvrLoadList
+ 014B:0012       OvrDosHandle
+ 014B:0014       OvrEmsHandle
+ 014B:0016       HeapOrg
+ 014B:001A       HeapPtr
+ 014B:001E       HeapEnd
+ 014B:0022       FreeList
+ 014B:0026       FreeZero
+ 014B:002A       HeapError
+ 014B:002E       ExitProc
+ 014B:0032       ExitCode
+ 014B:0034       ErrorAddr
+ 014B:0038       PrefixSeg
+ 014B:003A       StackLimit
+ 014B:003C       InOutRes
+ 014B:003E       RandSeed
+ 014B:0042       SelectorInc
+ 014B:0044       Seg0040
+ 014B:0046       SegA000
+ 014B:0048       SegB000
+ 014B:004A       SegB800
+ 014B:004C       Test8086
+ 014B:004D       Test8087
+ 014B:004E       FileMode
+ 014B:0052       lab
+ 014B:00B6       x
+ 014B:00B8       y
+ 014B:00BA       kolvo
+ 014B:00BC       n
+ 014B:00BE       code
+ 014B:00C0       str_n
+ 014B:01C0       CheckBreak
+ 014B:01C1       CheckEOF
+ 014B:01C2       DirectVideo
+ 014B:01C3       CheckSnow
+ 014B:01C4       LastMode
+ 014B:01C6       TextAttr
+ 014B:01C8       WindMin
+ 014B:01CA       WindMax
+ 014B:01D4       Input
+ 014B:02D4       Output
+ 014B:03D4       SaveInt00
+ 014B:03D8       SaveInt02
+ 014B:03DC       SaveInt1B
+ 014B:03E0       SaveInt21
+ 014B:03E4       SaveInt23
+ 014B:03E8       SaveInt24
+ 014B:03EC       SaveInt34
+ 014B:03F0       SaveInt35
+ 014B:03F4       SaveInt36
+ 014B:03F8       SaveInt37
+ 014B:03FC       SaveInt38
+ 014B:0400       SaveInt39
+ 014B:0404       SaveInt3A
+ 014B:0408       SaveInt3B
+ 014B:040C       SaveInt3C
+ 014B:0410       SaveInt3D
+ 014B:0414       SaveInt3E
+ 014B:0418       SaveInt3F
+ 014B:041C       SaveInt75
+
+Program entry point at 0000:0258
