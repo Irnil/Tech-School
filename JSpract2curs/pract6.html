@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+
+    var stroka;
+    var i = 0;
+		var barr = [];
+
+    do{
+
+      alert('Йоукамон, ща будем вводить строку! Ну и удалим из нее все слова, где меньше трех символов.');
+
+      stroka = prompt('Введите строку: ');
+
+      alert('Начальная строка: ' + stroka);
+			barr = stroka.split(" ");
+
+			for(i=0;i<barr.length;i++){
+				if(barr[i].length < 3){
+					barr.splice(i,1);
+				}
+			}
+
+			stroka = barr.join(" ");
+
+			alert('Обработанная строка: ' + stroka);
+
+      var key = prompt('Еще разок? (y/n)');
+    }while(key=='y' || key=='Y');
+
+  </script>
+</body>
+</html>
