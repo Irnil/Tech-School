@@ -69,11 +69,11 @@ void Time :: Add(){
 	
 }
 
-void Triad :: Show(){
+void Time :: Show(){
 	
 }
 
-void Triad :: Compare(){
+void Time :: Compare(){
 	
 }
 
