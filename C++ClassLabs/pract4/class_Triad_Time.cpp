@@ -14,9 +14,10 @@ class Triad;
 
 class Triad{
 	private:
-		int tri1, tri2, tri3;
+		int tri1 = 0, tri2 = 0, tri3 = 0;
 		
 	public:
+		void avCheck(); //проверка на доступность: если триада равна нулю, то не была введена => функции сравнения и вывода будут недоступны
 		void Enter();
 		void Show();
 		void Compare();	//сравнение
@@ -72,6 +73,12 @@ void Read(string U, int &T){
 
 //----------------------------------CLASS_TRIAD_METHODS_REALIZE--------------------------------------------------------------------------------------
 
+void Triad :: avCheck(){
+	if(tri1 == 0 and tri2 == 0 and tri3 == 0){
+		cout<<"You haven't still enter any values of triad"<<endl;
+	}
+}
+
 void Triad :: Enter(){
 	Read("Enter first number: ", tri1);
 	Read("Enter second number: ", tri2);
@@ -88,6 +95,44 @@ void Triad :: Compare(){
 }
 
 void Triad :: Change(){
+
+	int key;
+	
+	for( ; ; ){
+		cout<<""<<endl;
+		cout<<"Select action:"<<endl;
+		cout<<"1. Change first value"<<endl;
+		cout<<"2. Change second value"<<endl;
+		cout<<"3. Change third"<<endl;
+		cout<<"4. Exit changes"<<endl;
+		
+		while(true){
+	
+					cin>>key;
+					cout<<""<<endl;
+			
+					if(cin.peek()=='\n'){
+						cin.get();
+						break;
+					}
+					else{
+						cout<<"Wrong input! Select a correct action."<<endl;
+						cin.clear();	
+					while(cin.get()!='\n'){}
+					}
+				}
+	
+		switch(key){
+
+			case 1: Read("Enter first number: ", tri1);break;
+			case 2: Read("Enter second number: ", tri2); break;
+			case 3: Read("Enter third number: ", tri3); break;
+			case 4: Show();
+					exit(1);
+					
+			default:cout<<"Wrong! Select a correct avtion."<<endl; break;
+		}
+	}
 	
 }
 
@@ -117,38 +162,83 @@ void Time :: Compare(){
 //------------------------------------MAIN_BLOCK-----------------------------------------------------------------------------------------------------
 
 int main(){
+	
 	int key;
-	Triad GO;
+	Triad one, two;
 	
-	GO.Enter();
+	for( ; ; ){
 	
-for( ; ; ){
-
-	cout<<""<<endl;
-	cout<<"Select action:"<<endl;
-	cout<<"1. Show triad"<<endl;
-	cout<<"7. Exit programm"<<endl;
-	
-	while(true){
-
-				cin>>key;
-				cout<<""<<endl;
+		cout<<""<<endl;
+		cout<<"Select action:"<<endl;
+		cout<<"1. Enter triads"<<endl;
+		cout<<"2. Show triads"<<endl;
+		cout<<"3. Change triads"<<endl;
+		cout<<"7. Exit programm"<<endl;
 		
-				if(cin.peek()=='\n'){
-					cin.get();
+		while(true){
+	
+					cin>>key;
+					cout<<""<<endl;
+			
+					if(cin.peek()=='\n'){
+						cin.get();
+						break;
+					}
+					else{
+						cout<<"Wrong input! Select a correct action."<<endl;
+						cin.clear();	
+					while(cin.get()!='\n'){}
+					}
+				}
+	
+		switch(key){
+			case 1: cout<<"Please enter first triad: "<<endl;
+					one.Enter(); 
+					cout<<"Please enter second triad: "<<endl;
+					two.Enter();
+					break; 
+					
+			case 2: cout<<"First triad: "<<endl;
+					one.Show(); 
+					cout<<"Second triad: "<<endl;
+					two.Show();
 					break;
-				}
-				else{
-					cout<<"Wrong input! Select a correct action."<<endl;
-					cin.clear();	
-				while(cin.get()!='\n'){}
-				}
-			}
-
-	switch(key){
-		case 1: GO.Show(); break; 
-		case 7: exit(1);
-		default:cout<<"Wrong! Select a correct action."<<endl; break;}
+					
+			case 3: for( ; ; ){
+						cout<<""<<endl;
+						cout<<"Select triad to change: "<<endl;
+						cout<<"1. First triad"<<endl;
+						cout<<"2. Second triad"<<endl;
+						cout<<"3. Exit changes"<<endl;
+						
+						while(true){
+	
+							cin>>key;
+							cout<<""<<endl;
+					
+							if(cin.peek()=='\n'){
+								cin.get();
+								break;
+							}
+							else{
+								cout<<"Wrong input! Select a correct action."<<endl;
+								cin.clear();	
+							while(cin.get()!='\n'){}
+							}
+						}
+						
+						switch(key){
+							case 1: break;
+							case 2: break;
+							case 3: break;
+						}
+					}
+					break;
+					
+			case 7: exit(1);
+			
+			default:cout<<"Wrong! Select a correct action."<<endl; break;
+		}
 	}
 	
 }
