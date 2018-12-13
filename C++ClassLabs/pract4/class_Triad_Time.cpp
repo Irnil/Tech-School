@@ -17,7 +17,7 @@ class Triad{
 		int tri1 = 0, tri2 = 0, tri3 = 0;
 		
 	public:
-		void avCheck(); //проверка на доступность: если триада равна нулю, то не была введена => функции сравнения и вывода будут недоступны
+		bool avCheck(); //проверка на доступность: если триада равна нулю, то не была введена => функции сравнения и вывода будут недоступны
 		void Enter();
 		void Show();
 		void Compare();	//сравнение
@@ -73,10 +73,11 @@ void Read(string U, int &T){
 
 //----------------------------------CLASS_TRIAD_METHODS_REALIZE--------------------------------------------------------------------------------------
 
-void Triad :: avCheck(){
+bool Triad :: avCheck(){
 	if(tri1 == 0 and tri2 == 0 and tri3 == 0){
-		cout<<"You haven't still enter any values of triad"<<endl;
+		return 0;
 	}
+	else return 1;
 }
 
 void Triad :: Enter(){
@@ -205,7 +206,9 @@ int main(){
 					break;
 					
 			case 3: for( ; ; ){
+//						system("cls");
 						cout<<""<<endl;
+						one.avCheck();
 						cout<<"Select triad to change: "<<endl;
 						cout<<"1. First triad"<<endl;
 						cout<<"2. Second triad"<<endl;
@@ -218,6 +221,7 @@ int main(){
 					
 							if(cin.peek()=='\n'){
 								cin.get();
+								
 								break;
 							}
 							else{
@@ -230,7 +234,8 @@ int main(){
 						switch(key){
 							case 1: break;
 							case 2: break;
-							case 3: break;
+							case 3: exit(1);
+							default:cout<<"Wrong! Select a correct action."<<endl; break;
 						}
 					}
 					break;
