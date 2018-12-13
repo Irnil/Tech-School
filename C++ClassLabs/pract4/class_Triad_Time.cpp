@@ -165,7 +165,8 @@ void Time :: Compare(){
 int main(){
 	
 	int key;
-	Triad one, two;
+	bool on1, on2;
+	Triad one, two; 
 	
 	for( ; ; ){
 	
@@ -206,40 +207,47 @@ int main(){
 					break;
 					
 			case 3: for( ; ; ){
-//						system("cls");
-						cout<<""<<endl;
-						one.avCheck();
-						cout<<"Select triad to change: "<<endl;
-						cout<<"1. First triad"<<endl;
-						cout<<"2. Second triad"<<endl;
-						cout<<"3. Exit changes"<<endl;
-						
-						while(true){
-	
-							cin>>key;
-							cout<<""<<endl;
-					
-							if(cin.peek()=='\n'){
-								cin.get();
-								
-								break;
-							}
-							else{
-								cout<<"Wrong input! Select a correct action."<<endl;
-								cin.clear();	
-							while(cin.get()!='\n'){}
-							}
+						on1 = one.avCheck();
+						on2 - two.avCheck();
+						if(on1 == false and on2 == false){
+							cout<<"Values are empty!"<<endl;
+							break;
 						}
+						else{
 						
-						switch(key){
-							case 1: break;
-							case 2: break;
-							case 3: exit(1);
-							default:cout<<"Wrong! Select a correct action."<<endl; break;
+							cout<<""<<endl;
+							cout<<"Select triad to change: "<<endl;
+							cout<<"1. First triad"<<endl;
+							cout<<"2. Second triad"<<endl;
+							cout<<"3. Exit changes"<<endl;
+							
+							while(true){
+		
+								cin>>key;
+								cout<<""<<endl;
+						
+								if(cin.peek()=='\n'){
+									cin.get();
+									
+									break;
+								}
+								else{
+									cout<<"Wrong input! Select a correct action."<<endl;
+									cin.clear();	
+								while(cin.get()!='\n'){}
+								}
+							}
+							
+							switch(key){
+								case 1: break;
+								case 2: break;
+								case 3: exit(1);
+								default:cout<<"Wrong! Select a correct action."<<endl; break;
+							}
 						}
 					}
 					break;
-					
+			
 			case 7: exit(1);
 			
 			default:cout<<"Wrong! Select a correct action."<<endl; break;
