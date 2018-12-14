@@ -200,11 +200,21 @@ int main(){
 					two.Enter();
 					break; 
 					
-			case 2: cout<<"First triad: "<<endl;
-					one.Show(); 
-					cout<<"Second triad: "<<endl;
-					two.Show();
-					break;
+			case 2: on1 = one.avCheck();
+					on2 - two.avCheck();
+					
+					if(on1 == false and on2 == false){
+						cout<<"Values are empty!"<<endl;
+						break;
+					}
+					
+					else{						
+						cout<<"First triad: "<<endl;
+						one.Show(); 
+						cout<<"Second triad: "<<endl;
+						two.Show();
+						break;
+					}
 					
 			case 3: for( ; ; ){
 						on1 = one.avCheck();
@@ -239,8 +249,8 @@ int main(){
 							}
 							
 							switch(key){
-								case 1: break;
-								case 2: break;
+								case 1: break; break;  //<<<<<<<<<<<<<<проблема в блоке, не выход в предыдущее меню, вылетает из проги при выборе выхода, скопировать вариант из 3й лабы
+								case 2: break; break;
 								case 3: exit(1);
 								default:cout<<"Wrong! Select a correct action."<<endl; break;
 							}
