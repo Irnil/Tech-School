@@ -164,7 +164,7 @@ void Time :: Compare(){
 
 int main(){
 	
-	int key;
+	int key1, key2;
 	bool on1, on2;
 	Triad one, two; 
 	
@@ -179,7 +179,7 @@ int main(){
 		
 		while(true){
 	
-					cin>>key;
+					cin>>key1;
 					cout<<""<<endl;
 			
 					if(cin.peek()=='\n'){
@@ -193,7 +193,7 @@ int main(){
 					}
 				}
 	
-		switch(key){
+		switch(key1){
 			case 1: cout<<"Please enter first triad: "<<endl;
 					one.Enter(); 
 					cout<<"Please enter second triad: "<<endl;
@@ -216,7 +216,8 @@ int main(){
 						break;
 					}
 					
-			case 3: for( ; ; ){
+			case 3: do{
+				
 						on1 = one.avCheck();
 						on2 - two.avCheck();
 						if(on1 == false and on2 == false){
@@ -233,7 +234,7 @@ int main(){
 							
 							while(true){
 		
-								cin>>key;
+								cin>>key2;
 								cout<<""<<endl;
 						
 								if(cin.peek()=='\n'){
@@ -248,14 +249,23 @@ int main(){
 								}
 							}
 							
-							switch(key){
-								case 1: break; break;  //<<<<<<<<<<<<<<проблема в блоке, не выход в предыдущее меню, вылетает из проги при выборе выхода, скопировать вариант из 3й лабы
-								case 2: break; break;
-								case 3: exit(1);
-								default:cout<<"Wrong! Select a correct action."<<endl; break;
+							if(key2 == 1){
+							
+								cout<<"Please enter first triad: "<<endl;
+										one.Enter(); 
+										continue;
 							}
+							
+							if(key2 == 2){
+							
+								cout<<"Please enter second triad: "<<endl;
+										two.Enter();
+										continue; 
+							}
+							
 						}
-					}
+						
+					}while(key2 != 3);
 					break;
 			
 			case 7: exit(1);
