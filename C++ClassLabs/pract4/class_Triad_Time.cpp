@@ -13,15 +13,13 @@ using namespace std;
 class Triad;
 
 class Triad{
-	private:
+	
+	public:
 		int tri1 = 0, tri2 = 0, tri3 = 0;
 		
-	public:
 		bool avCheck(); //проверка на доступность: если триада равна нулю, то не была введена => функции сравнения и вывода будут недоступны
 		void Enter();
 		void Show();
-		void Compare();	//сравнение
-		void Change();
 		void Sum();
 	
 };
@@ -91,52 +89,6 @@ void Triad :: Show(){
 	cout<<tri1<<" | "<<tri2<<" | "<<tri3<<endl;
 }
 
-void Triad :: Compare(){
-	
-}
-
-void Triad :: Change(){
-
-	int key;
-	
-	for( ; ; ){
-		cout<<""<<endl;
-		cout<<"Select action:"<<endl;
-		cout<<"1. Change first value"<<endl;
-		cout<<"2. Change second value"<<endl;
-		cout<<"3. Change third"<<endl;
-		cout<<"4. Exit changes"<<endl;
-		
-		while(true){
-	
-					cin>>key;
-					cout<<""<<endl;
-			
-					if(cin.peek()=='\n'){
-						cin.get();
-						break;
-					}
-					else{
-						cout<<"Wrong input! Select a correct action."<<endl;
-						cin.clear();	
-					while(cin.get()!='\n'){}
-					}
-				}
-	
-		switch(key){
-
-			case 1: Read("Enter first number: ", tri1);break;
-			case 2: Read("Enter second number: ", tri2); break;
-			case 3: Read("Enter third number: ", tri3); break;
-			case 4: Show();
-					exit(1);
-					
-			default:cout<<"Wrong! Select a correct avtion."<<endl; break;
-		}
-	}
-	
-}
-
 void Triad :: Sum(){
 	
 }
@@ -175,6 +127,7 @@ int main(){
 		cout<<"1. Enter triads"<<endl;
 		cout<<"2. Show triads"<<endl;
 		cout<<"3. Change triads"<<endl;
+		cout<<"4. Compare triads"<<endl;
 		cout<<"7. Exit programm"<<endl;
 		
 		while(true){
@@ -266,6 +219,32 @@ int main(){
 						}
 						
 					}while(key2 != 3);
+					break;
+			
+			case 4: on1 = one.avCheck();
+					on2 - two.avCheck();
+					
+					if(on1 == false and on2 == false){
+						cout<<"Values are empty!"<<endl;
+						break;
+					}
+					
+					else{
+						
+						cout<<"Copmareing two triads: "<<endl;
+						
+						if(one.tri1 == two.tri1 and one.tri2 == two.tri2 and one.tri3 == two.tri3){
+							cout<<"Triads are match!"<<endl;
+						}
+						else if(one.tri1 > two.tri1 or
+						   one.tri1 == two.tri1 and one.tri2 > two.tri2 or
+						   one.tri1 == two.tri1 and one.tri2 == two.tri2 and one.tri3 > two.tri3){
+							cout<<"First triad is bigger then second."<<endl;
+						}
+						else{
+							cout<<"Second triad is bigger then first"<<endl;
+						}
+					}
 					break;
 			
 			case 7: exit(1);
