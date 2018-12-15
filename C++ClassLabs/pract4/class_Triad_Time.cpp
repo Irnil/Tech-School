@@ -17,10 +17,9 @@ class Triad{
 	public:
 		int tri1 = 0, tri2 = 0, tri3 = 0;
 		
-		bool avCheck(); //проверка на доступность: если триада равна нулю, то не была введена => функции сравнения и вывода будут недоступны
+		bool avCheck(); //check for available of triad: if triad = 0 so it hasn't been entered => compare and show are impossible
 		void Enter();
 		void Show();
-		void Sum();
 	
 };
 
@@ -30,8 +29,7 @@ class Time{
 	private:
 		int hour, min, sec;
 	public:
-		void Check(Triad&); //проверка на соответсвие при портировании класса Triad в Time т.к. часов 24, минут 60, секунд 60
-		void Add();
+		void Transform(Triad&); // cheking and transforming triad to time cuz it's 24 hours, 60 minutes and 60 seconds 
 		void Show();
 		void Compare();
 };
@@ -89,17 +87,9 @@ void Triad :: Show(){
 	cout<<tri1<<" | "<<tri2<<" | "<<tri3<<endl;
 }
 
-void Triad :: Sum(){
-	
-}
-
 //----------------------------------CLASS_TIME_METHODS_REALIZE---------------------------------------------------------------------------------------
 
-void Time :: Check(Triad&){
-	
-}
-
-void Time :: Add(){
+void Time :: Transform(Triad&){
 	
 }
 
